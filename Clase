@@ -1,0 +1,23 @@
+Tablespaces
+
+Es un espacio para guardar las configuraciones de ciertos objetos de manera lógica.
+Todo usuario tiene asignado un tablespace pero si no se le asigna, el sistema se lo da por defecto que es el system.
+
+Se crea un tablespace para no utilizar el de system
+
+Una base de datos tiene 1 o mas tablespaces
+Un tablespace tiene 1 o mas datafiles
+
+El datafile es el archivo físico que queda guardado en en el Disco C
+cuando se crea un datafile no importa cuál extensión le pongas
+
+
+select * from user_users;
+
+select * from dba_tablespaces;
+
+select * from dba_data_files;
+
+CREATE TABLESPACE lmtbsb
+    Datafile 'C:\APP\SALAN502\VIRTUAL\ORADATA\ORCL\lmtbsb.DBF' SIZE 50M
+    EXTENT MANAGEMENT LOCAL AUTOALLOCATE;
